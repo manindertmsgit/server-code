@@ -13,8 +13,7 @@ app.get('/', function (req, res) {
   });
 });
 app.get('/api/partners', async (req, res) => {
-  // res.json(await elasticSearch.getAll('partners'));
-  res.json(data.partners);
+  res.json(await elasticSearch.getAll('partners'));
 });
 app.post('/api/initialise-partners', async (req, res) => {
   res.json(await elasticSearch.initialise('partners'));

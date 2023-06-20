@@ -19,6 +19,46 @@ async function indexDocument(index, document) {
     }
 }
 
+// async function indexDocument(index, document) {
+//     try {
+//       const id = document.id; 
+  
+//       const indexResult = await elasticClient.index({
+//         index: index,
+//         id: id,
+//         body: document,
+//       });
+  
+//       console.log(`Indexed document with ID ${id}`);
+//       return id;
+//     } catch (error) {
+//       console.log('Error indexing document:', error);
+//       throw error;
+//     }
+//   }
+
+// elasticClient.index(
+//     {
+//       index: 'partners',
+//       id: '1',
+//       type: 'posts',
+//       body: document,
+//     },
+
+    // function (err, resp, status) {
+    //   if (err) {
+    //     console.error('Error indexing document:', err);
+    //     res.status(500).json({ error: 'An error occurred' });
+    //   } else {
+    //     console.log(resp);
+    //     res.json(resp);
+    //   }
+    // }
+  
+
+
+
+
 async function initialise(index) {
     const dataValues = data[index]
     await Promise.all(
